@@ -7,8 +7,10 @@ Rails.application.routes.draw do
       resources :comments
       resources :genres
       resources :authors
-      resources :users
       resources :books
+      resources :users do
+        resources :books, only: [:index]
+      end
     end
   end
 end
