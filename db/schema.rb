@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_03_18_203736) do
     t.string "title"
     t.string "description"
     t.string "award"
-    t.integer "author_id"
+    t.integer "authors_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
