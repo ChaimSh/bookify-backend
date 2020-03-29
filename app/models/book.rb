@@ -5,5 +5,5 @@ class Book < ApplicationRecord
   has_many :genres
   has_many :comments
 
-
+  validates :title, presence: :true
 end
