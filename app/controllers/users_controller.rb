@@ -1,4 +1,4 @@
-class Api::V1::UsersController < ApplicationController
+class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   # # GET /users
@@ -19,7 +19,7 @@ class Api::V1::UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      render json: render json: UserSerializer.new(@user), status: :created
+      render json: UserSerializer.new(@user), status: :created
       # @user, status: :created, location: @user
     else
       resp = {
